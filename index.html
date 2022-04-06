@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>run</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .inner {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            border: 1px solid red;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .street {
+            position: absolute;
+            width: 600px;
+            border-top: 2px dashed;
+            left: 0;
+        }
+
+        .hide {
+            overflow: hidden;
+        }
+
+        .deth {
+            height: 20px;
+            width: 10px;
+            position: absolute;
+            background-color: red;
+            right: 300px;
+            z-index: 10;
+        }
+
+        .dino {
+            width: 10px;
+            height: 25px;
+            background-color: gold;
+            position: absolute;
+            left: 15px;
+            z-index: 10;
+
+        }
+
+        .dino-jump {
+            animation-name: jump;
+            animation-duration: 1.3s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-50px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inner">
+        <div class="hide">
+            <div class="container">
+                <div class="dino"></div>
+                <div class="street"></div>
+            </div>
+            <div class="score">
+                score: <span></span>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="dino-result.js"></script>
+</body>
+
+</html>
